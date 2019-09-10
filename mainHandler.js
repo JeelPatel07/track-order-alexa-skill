@@ -95,56 +95,7 @@ const mainHandler = {
 
     this.emit(":responseReady");
   },
-  // Begining of Reorder Intent
 
-  ReorderIntent: async function() {
-    console.log("in ReOrderIntent");
-    let myOrders = await cToolsOperations.getLineItemsForCustomer(
-      ctools_customer_id
-    );
-
-    console.log("myjson is=" + JSON.stringify(myOrders));
-
-    let searchedOrders = myOrders.filter(item => {
-      console.log(
-        `item shipmentState: ${item.shipmentState}` === `WaitingForArtwork`
-      );
-
-      return true;
-    });
-
-    if (myOrders.length > 0) {
-      let reOrder = myOrders[0];
-
-      let RESPONSE_TEXT =
-        " Your Product with name " +
-        reOrder.name +
-        " having new Order Number" +
-        "  " +
-        "  " +
-        reOrder.orderNumber +
-        "-R" +
-        " having  " +
-        " " +
-        " arrival date  " +
-        " " +
-        newdateFormatter(reOrder.arrivalDate) +
-        "  " +
-        " . ";
-      this.response.cardRenderer(RESPONSE_TEXT);
-      this.response.speak(RESPONSE_TEXT);
-      this.response.shouldEndSession(false);
-      this.response.listen(HELP_REPROMPT);
-      this.emit(":responseReady");
-    } else {
-      let RESPONSE_TEXT = "No orders found.";
-      this.response.cardRenderer(RESPONSE_TEXT);
-      this.response.speak(RESPONSE_TEXT);
-      this.response.shouldEndSession(false);
-      this.response.listen(HELP_REPROMPT);
-      this.emit(":responseReady");
-    } //  End of LastOrderIntent..
-  },
   // Begining of OrderIntent..,
   OrderIntent: async function() {
     console.log(
