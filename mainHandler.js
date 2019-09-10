@@ -2,7 +2,7 @@ const axios = require("axios");
 
 const rp = require("request-promise");
 
-let SKILL_NAME = "tradeprint";
+let SKILL_NAME = "tradeprint"; //invocation for skill
 
 let HELP_MESSAGE =
   "Welcome to TradePrint Business Model . You can ask me things like, What is the  status for product!! What can I help you with?";
