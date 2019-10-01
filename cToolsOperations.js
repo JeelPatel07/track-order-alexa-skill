@@ -9,9 +9,7 @@ module.exports = function commerceToolsOperations(
     try {
       return axios({
         method: "post",
-        url:
-          "https://auth.sphere.io/oauth/token?grant_type=client_credentials&scope=" +
-          ctoolsScope,
+        url: "API" + ctoolsScope,
         auth: {
           username: clientId,
           password: clientSecret
