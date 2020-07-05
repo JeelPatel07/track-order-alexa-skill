@@ -52,7 +52,7 @@ Get the Information about the products
 
 # Set Up the Demo
 
-Be sure you have the AWS CLI and ASK CLI setup.
+Be sure you have the AWS CLI setup.
 
 #### AWS setup steps
 
@@ -60,3 +60,35 @@ First, you will set up the AWS Lambda function, which contains the skill service
 
 - Note: Note: The CloudFormation package should be run from the us-east-1 region, also known as N. Virginia. Verify your default region in the AWS CLI by typing `aws configure` and pressing enter four times.
 
+# Demonstration
+
+### Enable Alexa Skill on Mobile 
+
+This configuration makes it easier for users to enable your skill and use the features that do not require authentication.Alternatively, you can require users to link their account when they enable the skill.Users can initiate the account linking flow for a skill from the Alexa app in when enabling the skill.
+
+![Setup2](https://github.com/JeelPatel07/track-order-alexa-skill/blob/master/Setup2.png)
+![Setup1](https://github.com/JeelPatel07/track-order-alexa-skill/blob/master/Setup1.png) 
+
+
+
+### Running Skill
+
+Launch the demo, `Alexa, open tradeprint`
+
+![WelcomeScreen](https://github.com/JeelPatel07/track-order-alexa-skill/blob/master/Welcome%20Screen.png)  
+
+ User says  utterances like say `Alexa, track my flyers`
+ 
+ 
+![WelcomeScreen](https://github.com/JeelPatel07/track-order-alexa-skill/blob/master/Status%20Screen.png) 
+
+
+ 
+
+                 
+                 
+                 
+                 
+                 
+                 
+    
