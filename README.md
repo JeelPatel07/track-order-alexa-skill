@@ -50,7 +50,7 @@ Get the Information about the products
 ]
 ```
 
-# Set Up the Demo
+# Setup Instructions
 
 Be sure you have the AWS CLI setup.
 
